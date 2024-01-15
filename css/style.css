@@ -451,7 +451,7 @@ html {
       color: #999;
       font-weight: 400;
   }
-  .agile-link-bnr-gs {
+  .agile-link-bnr {
       padding: 10px 40px;
       color: #999;
       font-weight: 600;
@@ -461,38 +461,10 @@ html {
       background: none;
       border: 1px solid #999;
   }
-  .agile-link-bnr-gs:hover {
+  .agile-link-bnr:hover {
       background:#e7746f;
       border: 1px solid #e7746f;
   }
-  .agile-link-bnr-gh {
-    padding: 10px 40px;
-    color: #999;
-    font-weight: 600;
-    letter-spacing: 2px;
-    font-size: 16px;
-    text-transform: capitalize;
-    background: none;
-    border: 1px solid #999;
-    }
-    .agile-link-bnr-gh:hover {
-        background:#489e40;
-        border: 1px solid #489e40;
-    }
-    .agile-link-bnr-li {
-        padding: 10px 40px;
-        color: #999;
-        font-weight: 600;
-        letter-spacing: 2px;
-        font-size: 16px;
-        text-transform: capitalize;
-        background: none;
-        border: 1px solid #999;
-        }
-    .agile-link-bnr-li:hover {
-        background:#6b69d4;
-        border: 1px solid #6b69d4;
-    }
   .news {
       padding: 4em 4em;
       background: #ffffff;
