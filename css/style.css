@@ -489,10 +489,10 @@ html {
         background: none;
         border: 1px solid #999;
         }
-        .agile-link-bnr-li:hover {
-            background:#6b69d4;
-            border: 1px solid #6b69d4;
-        }
+    .agile-link-bnr-li:hover {
+        background:#6b69d4;
+        border: 1px solid #6b69d4;
+    }
   .news {
       padding: 4em 4em;
       background: #ffffff;
