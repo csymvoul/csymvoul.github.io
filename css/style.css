@@ -451,20 +451,6 @@ html {
       color: #999;
       font-weight: 400;
   }
-  .agile-link-bnrgh {
-    padding: 10px 40px;
-    color: #999;
-    font-weight: 600;
-    letter-spacing: 2px;
-    font-size: 16px;
-    text-transform: capitalize;
-    background: none;
-    border: 1px solid #999;
-    }
-    .agile-link-bnrgh:hover {
-        background:#489e40;
-        border: 1px solid #489e40;
-    }
   .agile-link-bnr {
       padding: 10px 40px;
       color: #999;
