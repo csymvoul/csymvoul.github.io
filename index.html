@@ -1,221 +1,1418 @@
 <!DOCTYPE html>
-<html lang="zxx">
-    <head>
-        <title>Chrysostomos Symvoulidis - Personal Page</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="utf-8" />
-        <meta name="keywords" content="" />
-        <script>
-            addEventListener("load", function () {
-                setTimeout(hideURLbar, 0);
-            }, false);
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chrysostomos Symvoulidis — PhD in AI, researcher in Causal Discovery, Cloud and Edge Computing.">
+  <title>Chrysostomos Symvoulidis</title>
+  <link rel="icon" id="favicon" type="image/png" href="https://csymvoul.github.io/images/csymvoul.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-            function hideURLbar() {
-                window.scrollTo(0, 1);
-            }
-            function noMessage() {
-                alert("Cannot send message now. Server maintaining.");
-            }
-        </script>
-        <!-- Custom Theme files -->
-        <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-        <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-        <!-- font-awesome icons -->
-        <!-- <link href="css/fontawesome-all.min.css" rel="stylesheet"> -->
-        <!-- //Custom Theme files -->
-        <!-- online-fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
-        <!-- //online-fonts -->
-        <link rel="shortcut icon" type="image/x-icon" href="images/head.png" />
-    </head>
-    <body>
-        <div class="sidenav">
-            <div class="side_top">
-            <img src="images/csymvoul.jpg" alt="Chrysostomos Symvoulidis" class="img-fluid navimg" width="200px">
-                <h1> <b>Chrysostomos Symvoulidis</b> <br>Department of Digital Systems<br>University of Piraeus, Greece <br>simvoul@unipi.gr<br></h1>
-                <br>
-            </div>
-            
-            <header>
-                <div class="container-fluid px-lg-5 ">
-                    <nav class="mnu mx-auto">
-                        <label for="drop" class="toggle">Menu</label>
-                        <input type="checkbox" id="drop">
-                            <ul class="menu">
-                                <li class="active"><a href="index.html">Home</a></li>
-                                <li class="mt-sm-3"><a href="#about" class="scroll">About</a></li>
-                                <li class="mt-sm-3"><a href="#education" class="scroll">Education</a></li>
-                                <li class="mt-sm-3"><a href="#publication" class="scroll">Publications</a></li>
-                                <li class="mt-sm-3"><a href="#work" class="scroll">Work Experience</a></li>
-                                <li class="mt-sm-3"><a href="#projects" class="scroll">Research Projects</a></li>
-                                <li class="mt-sm-3"><a href="#teaching" class="scroll">Teaching Experience</a></li>
-                                <li class="mt-sm-3"><a href="#awards" class="scroll">Awards and Services</a></li>
-                                <li class="mt-sm-3"><a href="#skills" class="scroll">Skills and Interests</a></li>
-                            </ul>
-                    </nav>
-                </div>
-            </header>
+    :root {
+      --bg:          #0e0f11;
+      --surface:     #16181c;
+      --surface2:    #1e2026;
+      --border:      rgba(255,255,255,0.07);
+      --border-md:   rgba(255,255,255,0.12);
+      --text-1:      #f0efe8;
+      --text-2:      #9a9890;
+      --text-3:      #5a5954;
+      --accent:      #4a9eff;
+      --accent-dim:  rgba(74,158,255,0.12);
+      --accent-glow: rgba(74,158,255,0.25);
+      --gold:        #e8a030;
+      --gold-dim:    rgba(232,160,48,0.12);
+      --green:       #4caf7d;
+      --green-dim:   rgba(76,175,125,0.12);
+      --radius:      10px;
+      --radius-lg:   16px;
+      --nav-w:       220px;
+    }
+
+    /* Light theme overrides */
+    [data-theme="light"] {
+      --bg:          #f5f4f0;
+      --surface:     #ffffff;
+      --surface2:    #eeede8;
+      --border:      rgba(0,0,0,0.08);
+      --border-md:   rgba(0,0,0,0.14);
+      --text-1:      #1a1a18;
+      --text-2:      #555550;
+      --text-3:      #999890;
+      --accent:      #185fa5;
+      --accent-dim:  rgba(24,95,165,0.08);
+      --accent-glow: rgba(24,95,165,0.15);
+      --gold:        #8a5200;
+      --gold-dim:    rgba(138,82,0,0.10);
+      --green:       #2e7d4f;
+      --green-dim:   rgba(46,125,79,0.10);
+    }
+    [data-theme="light"] .hero-bg {
+      background:
+        radial-gradient(ellipse 60% 60% at 70% 40%, rgba(24,95,165,0.05) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(46,125,79,0.04) 0%, transparent 50%);
+    }
+
+    html { scroll-behavior: smooth; font-size: 15px; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text-1);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    strong { font-weight: 600; }
+
+    /* ═══════════════════════════════════════
+       SIDEBAR NAV
+    ═══════════════════════════════════════ */
+    .sidenav {
+      position: fixed;
+      top: 0; left: 0;
+      width: var(--nav-w);
+      height: 100vh;
+      padding: 2.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      border-right: 0.5px solid var(--border);
+      background: var(--bg);
+      z-index: 100;
+    }
+    .sidenav-logo {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-1);
+      letter-spacing: 0.02em;
+      margin-bottom: 2.5rem;
+      line-height: 1.4;
+    }
+    .sidenav-logo span { color: var(--accent); }
+    .sidenav-links { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+    .sidenav-links a {
+      font-size: 13px;
+      color: var(--text-3);
+      padding: 6px 10px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.15s, background 0.15s;
+      text-decoration: none;
+    }
+    .sidenav-links a::before {
+      content: '';
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: currentColor;
+      flex-shrink: 0;
+      transition: background 0.15s;
+    }
+    .sidenav-links a:hover,
+    .sidenav-links a.active {
+      color: var(--text-1);
+      background: var(--surface2);
+    }
+    .sidenav-links a.active { color: var(--accent); }
+    .sidenav-links a.active::before { background: var(--accent); }
+    .sidenav-social {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding-top: 1.5rem;
+      border-top: 0.5px solid var(--border);
+    }
+    .sidenav-social a {
+      font-size: 11px;
+      color: var(--text-3);
+      padding: 4px 8px;
+      border: 0.5px solid var(--border-md);
+      border-radius: 5px;
+      transition: color 0.15s, border-color 0.15s;
+      text-decoration: none;
+    }
+    .sidenav-social a:hover { color: var(--text-1); border-color: var(--text-3); }
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 0.75rem;
+      padding-top: 1rem;
+    }
+    .theme-toggle-btn {
+      position: relative;
+      width: 40px; height: 22px;
+      border-radius: 11px;
+      border: 0.5px solid var(--border-md);
+      background: var(--surface2);
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .theme-toggle-btn::after {
+      content: '';
+      position: absolute;
+      top: 3px; left: 3px;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: var(--text-3);
+      transition: transform 0.2s, background 0.2s;
+    }
+    [data-theme="light"] .theme-toggle-btn::after {
+      transform: translateX(18px);
+      background: var(--accent);
+    }
+    [data-theme="light"] .theme-toggle-btn { border-color: var(--accent); }
+    .theme-toggle-label { font-size: 11px; color: var(--text-3); user-select: none; cursor: pointer; }
+
+    /* ═══════════════════════════════════════
+       MAIN CONTENT
+    ═══════════════════════════════════════ */
+    .main {
+      margin-left: var(--nav-w);
+      min-height: 100vh;
+    }
+
+    /* ═══════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════ */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 4rem 4rem 4rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 60% at 70% 40%, rgba(74,158,255,0.06) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(76,175,125,0.04) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 3rem;
+      align-items: center;
+      width: 100%;
+      max-width: 1100px;
+    }
+    .hero-name-row {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .hero-photo-wrap {
+      flex-shrink: 0;
+      opacity: 0;
+      animation: fadeIn 0.6s 0.15s ease forwards;
+    }
+    .hero-photo {
+      width: 97px;
+      height: 97px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
+      border: 2px solid var(--border-md);
+      display: block;
+    }
+    .hero-stats {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem 1rem;
+      opacity: 0;
+      animation: fadeIn 0.7s 0.6s ease forwards;
+    }
+    .hero-stat { display: flex; flex-direction: column; gap: 3px; }
+    .hero-stat-num {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1;
+      color: var(--text-1);
+    }
+    .hero-stat-num em { font-style: normal; color: var(--accent); }
+    .hero-stat-label {
+      font-size: 11px;
+      color: var(--text-3);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.6s 0.1s ease forwards;
+    }
+    .hero-name {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.6s 0.2s ease forwards;
+    }
+    .hero-name em { font-style: normal; color: var(--accent); }
+    .hero-bio {
+      font-size: 16px;
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.6s 0.35s ease forwards;
+    }
+    .hero-keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.6s 0.45s ease forwards;
+    }
+    .kw {
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: var(--accent-dim);
+      color: var(--accent);
+      border: 0.5px solid rgba(74,158,255,0.2);
+    }
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.6s 0.55s ease forwards;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: var(--radius);
+      border: 0.5px solid var(--border-md);
+      background: var(--surface);
+      color: var(--text-1);
+      text-decoration: none;
+      transition: background 0.15s, border-color 0.15s, transform 0.12s;
+    }
+    .btn:hover { background: var(--surface2); border-color: var(--text-3); transform: translateY(-1px); text-decoration: none; }
+    .btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .btn-primary:hover { background: #5aaeff; border-color: #5aaeff; }
+    .btn svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      opacity: 0;
+      animation: fadeIn 0.6s 1s ease forwards;
+    }
+    .hero-scroll span { font-size: 11px; color: var(--text-3); letter-spacing: 0.08em; text-transform: uppercase; }
+    .scroll-arrow { width: 20px; height: 20px; border-right: 1.5px solid var(--text-3); border-bottom: 1.5px solid var(--text-3); transform: rotate(45deg); animation: bounce 1.8s infinite; }
+
+    /* ═══════════════════════════════════════
+       SECTIONS
+    ═══════════════════════════════════════ */
+    .section {
+      padding: 6rem 4rem;
+      border-top: 0.5px solid var(--border);
+    }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 3rem;
+    }
+    .section-num {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+    }
+    .section-title {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    /* ═══════════════════════════════════════
+       SCROLL ANIMATIONS
+    ═══════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal-left.visible { opacity: 1; transform: none; }
+    .stagger > * {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+    }
+    .stagger.visible > *:nth-child(1)  { opacity:1; transform:none; transition-delay: 0s; }
+    .stagger.visible > *:nth-child(2)  { opacity:1; transform:none; transition-delay: 0.07s; }
+    .stagger.visible > *:nth-child(3)  { opacity:1; transform:none; transition-delay: 0.14s; }
+    .stagger.visible > *:nth-child(4)  { opacity:1; transform:none; transition-delay: 0.21s; }
+    .stagger.visible > *:nth-child(5)  { opacity:1; transform:none; transition-delay: 0.28s; }
+    .stagger.visible > *:nth-child(6)  { opacity:1; transform:none; transition-delay: 0.35s; }
+    .stagger.visible > *:nth-child(7)  { opacity:1; transform:none; transition-delay: 0.42s; }
+    .stagger.visible > *:nth-child(8)  { opacity:1; transform:none; transition-delay: 0.49s; }
+    .stagger.visible > *:nth-child(n+9){ opacity:1; transform:none; transition-delay: 0.55s; }
+
+    /* ═══════════════════════════════════════
+       EDUCATION / TIMELINE
+    ═══════════════════════════════════════ */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .card {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+    }
+    .card-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-2);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 1.25rem;
+    }
+    .tl { display: flex; flex-direction: column; gap: 0; }
+    .tl-item {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 12px;
+      padding: 0.75rem 0;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .tl-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .tl-date { font-size: 11px; color: var(--text-3); padding-top: 3px; }
+    .tl-title { font-size: 13.5px; font-weight: 500; margin-bottom: 2px; }
+    .tl-sub { font-size: 12.5px; color: var(--text-2); line-height: 1.5; }
+
+    /* ═══════════════════════════════════════
+       WORK EXPERIENCE
+    ═══════════════════════════════════════ */
+    .work-list { display: flex; flex-direction: column; }
+    .work-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 2rem;
+      padding: 1.5rem 0;
+      border-bottom: 0.5px solid var(--border);
+      align-items: start;
+    }
+    .work-item:last-child { border-bottom: none; }
+    .work-date { font-size: 12px; color: var(--text-3); padding-top: 3px; }
+    .work-title { font-size: 15px; font-weight: 500; margin-bottom: 3px; }
+    .work-org { font-size: 13px; color: var(--accent); margin-bottom: 0; }
+
+    /* ═══════════════════════════════════════
+       PROJECTS
+    ═══════════════════════════════════════ */
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .proj-card {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.5rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .proj-card:hover { border-color: var(--border-md); transform: translateY(-2px); }
+    .proj-status {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .status-active { background: var(--green-dim); color: var(--green); }
+    .status-done   { background: var(--surface2); color: var(--text-3); }
+    .proj-name { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .proj-desc { font-size: 12.5px; color: var(--text-2); line-height: 1.55; margin-bottom: 8px; }
+    .proj-dates { font-size: 11px; color: var(--text-3); }
+
+    /* ═══════════════════════════════════════
+       PUBLICATIONS
+    ═══════════════════════════════════════ */
+    .pub-filter {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      font-size: 12px;
+      font-weight: 500;
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 0.5px solid var(--border-md);
+      background: transparent;
+      color: var(--text-2);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .filter-btn:hover { color: var(--text-1); }
+    .filter-btn.active { background: var(--accent-dim); color: var(--accent); border-color: rgba(74,158,255,0.3); }
+    .pub-list { display: flex; flex-direction: column; }
+    .pub-item {
+      padding: 1.25rem 0;
+      border-bottom: 0.5px solid var(--border);
+      transition: opacity 0.25s;
+    }
+    .pub-item:last-child { border-bottom: none; }
+    .pub-item.hidden { display: none; }
+    .pub-meta { display: flex; align-items: center; gap: 7px; margin-bottom: 6px; flex-wrap: wrap; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 9px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .badge-blue  { background: var(--accent-dim);  color: var(--accent); }
+    .badge-gray  { background: var(--surface2);     color: var(--text-2); }
+    .badge-green { background: var(--green-dim);    color: var(--green); }
+    .badge-gold  { background: var(--gold-dim);     color: var(--gold); }
+    .pub-title { font-size: 14px; font-weight: 500; line-height: 1.5; margin-bottom: 4px; }
+    .pub-authors { font-size: 12.5px; color: var(--text-2); margin-bottom: 3px; line-height: 1.5; }
+    .pub-venue { font-size: 12px; color: var(--text-3); font-style: italic; }
+    .pub-venue a { font-style: normal; margin-left: 6px; font-size: 12px; }
+
+    /* ═══════════════════════════════════════
+       TEACHING
+    ═══════════════════════════════════════ */
+    .teach-group { margin-bottom: 2.5rem; }
+    .teach-group:last-child { margin-bottom: 0; }
+    .teach-group-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-3);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      margin-bottom: 1rem;
+    }
+
+    /* ═══════════════════════════════════════
+       SKILLS
+    ═══════════════════════════════════════ */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .skill-card {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+      transition: border-color 0.2s;
+    }
+    .skill-card:hover { border-color: var(--border-md); }
+    .skill-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-3);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .tag {
+      font-size: 12px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      background: var(--surface2);
+      color: var(--text-2);
+      border: 0.5px solid var(--border);
+    }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════ */
+    footer {
+      padding: 3rem 4rem;
+      border-top: 0.5px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--text-3);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* ═══════════════════════════════════════
+       KEYFRAMES
+    ═══════════════════════════════════════ */
+    @keyframes fadeUp {
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: rotate(45deg) translateY(0); }
+      50%       { transform: rotate(45deg) translateY(4px); }
+    }
+
+    /* ═══════════════════════════════════════
+       MOBILE NAV
+    ═══════════════════════════════════════ */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(14,15,17,0.92);
+      backdrop-filter: blur(12px);
+      padding: 14px 1.5rem;
+      border-bottom: 0.5px solid var(--border);
+      overflow-x: auto;
+      scrollbar-width: none;
+      gap: 4px;
+    }
+    .mobile-nav::-webkit-scrollbar { display: none; }
+    .mobile-nav a {
+      flex-shrink: 0;
+      font-size: 12px;
+      color: var(--text-2);
+      padding: 4px 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .mobile-nav a:hover { color: var(--text-1); }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════ */
+    @media (max-width: 860px) {
+      :root { --nav-w: 0px; }
+      .sidenav { display: none; }
+      .mobile-nav { display: flex; }
+      .main { margin-left: 0; }
+      #hero { padding: 7rem 1.5rem 4rem; }
+      .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-stats { grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+      .section { padding: 5rem 1.5rem; }
+      footer { padding: 2rem 1.5rem; }
+      footer { padding: 2rem; }
+      .two-col { grid-template-columns: 1fr; }
+      .work-item { grid-template-columns: 1fr; gap: 4px; }
+    }
+    @media (max-width: 560px) {
+      .hero-name { font-size: 1.9rem; }
+      .section-title { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Mobile nav -->
+<nav class="mobile-nav" aria-label="Page sections">
+  <a href="#hero">Home</a>
+  <a href="#education">Education</a>
+  <a href="#work">Work</a>
+  <a href="#projects">Projects</a>
+  <a href="#publications">Publications</a>
+  <a href="#teaching">Teaching</a>
+  <a href="#awards">Awards</a>
+  <a href="#skills">Skills</a>
+</nav>
+
+<!-- Sidebar nav -->
+<aside class="sidenav">
+  <div class="sidenav-logo">Chrysostomos<br><span>Symvoulidis</span></div>
+  <nav class="sidenav-links" aria-label="Page sections">
+    <a href="#hero"         data-section="hero">Home</a>
+    <a href="#education"    data-section="education">Education</a>
+    <a href="#work"         data-section="work">Work</a>
+    <a href="#projects"     data-section="projects">Projects</a>
+    <a href="#publications" data-section="publications">Publications</a>
+    <a href="#teaching"     data-section="teaching">Teaching</a>
+    <a href="#awards"       data-section="awards">Awards &amp; services</a>
+    <a href="#skills"       data-section="skills">Skills</a>
+  </nav>
+  <div class="theme-toggle">
+    <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle light/dark mode"></button>
+    <label class="theme-toggle-label" for="themeToggle" id="themeLabel">Light mode</label>
+  </div>
+  <div class="sidenav-social">
+    <a href="https://scholar.google.com/citations?user=R6s73JIAAAAJ" target="_blank" rel="noopener">Scholar</a>
+    <a href="https://github.com/csymvoul" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/csymvoulidis" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://drive.google.com/file/d/1tVOj8I-8ZL9duYJH6j20ao8247o5pyZG/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+  </div>
+</aside>
+
+<main class="main">
+
+  <!-- ─── HERO ─── -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div>
+        <div class="hero-name-row">
+          <div class="hero-photo-wrap">
+            <img class="hero-photo" src="https://csymvoul.github.io/images/csymvoul.jpg" alt="Chrysostomos Symvoulidis">
+          </div>
+          <div>
+            <div class="hero-eyebrow">PhD · Artificial Intelligence</div>
+            <h1 class="hero-name">Chrysostomos<br><em>Symvoulidis</em></h1>
+          </div>
         </div>
-        <div class="main" id="about">
-            <div class="banner-text-w3ls">
-                <div class="container">
-                    <div class="mx-auto text-left">
-                        <h2><i>Hi! I'm Chrysostomos</i></h2>
-                        <p class="banp mt-5">I have a PhD in Artificial Intelligence from the <a href="https://www.ds.unipi.gr/en/home-en/">Department of Digital Systems, University of Piraeus, Greece</a>. 
-                            <br><br>My thesis focused on the design of Causal and Contextual Information Extraction and Data Enrichment Methods, with Emphasis on Artificial Intelligence-driven Optimization Algorithms for Cloud and Edge Computing. 
-                            
-                            <br><br>My research interests include <b>Causal Discovery, Causal Inference, Causal Learning, Cloud Computing, Deep Learning, Edge Computing, Machine Learning</b>.
-                        </p>
-                        <a class="btn btn-primary mt-lg-5 mt-3 agile-link-bnr" href="https://scholar.google.com/citations?user=R6s73JIAAAAJ&hl=el&oi=ao" role="button" target="_blank">Google Scholar</a>
-                        <a class="btn btn-primary mt-lg-5 mt-3 agile-link-bnr" href="https://github.com/csymvoul" role="button" target="_blank">GitHub</a>
-                        <a class="btn btn-primary mt-lg-5 mt-3 agile-link-bnr" href="https://www.linkedin.com/in/csymvoulidis" role="button" target="_blank">LinkedIn</a>
-                        <a class="btn btn-primary mt-lg-5 mt-3 agile-link-bnr" href="https://dac.ds.unipi.gr/members/chrysostomos-symvoulidis/" role="button" target="_blank">DaC Research Group</a>
-                        <a class="btn btn-primary mt-lg-5 mt-3 agile-link-bnr" href="https://drive.google.com/file/d/1ij2t-xJpCW0N1DSyKzcNrjbBde7-sWe7/view?usp=sharing" role="button" target="_blank">CV (updated May 2024)</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Education -->
-            <section class="gallery" id="education">
-                <h3 class="w3_head mb-5">Education</h3>
-                <p class="banp mt-5">
-                        • PhD. in Artificial Intelligence, Department of Digital Systems, University of Piraeus, 2024, Advisor: Prof. Dimosthenis Kyriazis</li>
-                        <br>• MSc. in Big Data and Analytics, Department of Digital Systems, University of Piraeus, 2018</li>
-                        <br>• BSc. in Computer Science, Department of Digital Systems, University of Piraeus, 2016</li>
-
-                </p>
-            </section>
-
-            <!-- Publications -->
-            <section class="slide-wrapper" id="publication">
-                <h3 class="w3_head mb-5">Publications</h3>
-                <p class="banp mt-5">
-                    <b>Journal Papers</b>
-                        <br>• [J08] E. Paraskevoulakou, <b>C. Symvoulidis</b>, P. Karamolegkos, G. Kousiouris, D. Kyriazis, 2026, "A Three-tier AI-based approach for dynamic application placement in cloud–edge environments", <i>Future Generation Computer Systems</i>, Elsevier. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167739X26001457" target="_blank">[Link]</a>
-                        <br>• [J07] L. Zacharias, I. Hesso, R. Kayyali, A. Charalambous, E. K. A. Triumbari, I. Chouvarda, T. Loncar-Turukalo, S. Sykiotis, <b>C. Symvoulidis</b>, A. Gutierrez-Torre, D. K. Nasikas, M. Kogut–Czarkowska, Y. Roussakis, M. Christodoulou, M. Liontou, S. Ausso Trias, D. Domínguez Herrera, O. Tsave, A. Alcaraz, D. Fotopoulos, K. Vevis, L. Mengual, N. Doulamis, N. Jakovljević, G. Papagiannis, D. Papalla, S. Finitsis, T. Ajami, E. Vasilakou, V. Zdravkovic, S. Nabhani-Gebara, 2026, "Evaluation of the INCISIVE Services in Cancer Imaging: A Feasibility Study", <i>Seminars in Oncology Nursing</i>, Elsevier. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0749208125002712" target="_blank">[Link]</a>
-                        <br>• [J06] <b>C. Symvoulidis</b>, A. Kiourtis, G. Marinos. J. D. Totow Tom-Ata, G. Manias, A. Mavrogiorgou, D. Kyriazis, 2023, "A User Mobility-based Data Placement Strategy in a Hybrid Cloud/Edge Environment using a Causal-aware Deep Learning Network", <i>IEEE Transactions on Computers</i>, IEEE. <a href="https://ieeexplore.ieee.org/document/10242108" target="_blank">[Link]</a>
-                        <br>• [J05] G. Manias, A. Mavrogiorgou, A. Kiourtis, <b>C. Symvoulidis</b>, D. Kyriazis, 2023, "Multilingual text categorization and sentiment analysis: a comparative analysis of the utilization of multilingual approaches for classifying twitter data", <i>Neural Computing and Applications</i>, Springer International Publishing. <a href="https://link.springer.com/article/10.1007/s00521-023-08629-3" target="_blank">[Link]</a>
-                        <br>• [J04] A. Mavrogiorgou, A. Kiourtis, G. Manias, <b>C. Symvoulidis</b>, D. Kyriazis, 2023, "Batch and Streaming Data Ingestion towards Creating Holistic Health Records", <i>Emerging Science Journal</i>, Ital Publication. <a href="https://www.researchgate.net/profile/Chrysostomos-Symvoulidis/publication/368527014_Batch_and_Streaming_Data_Ingestion_towards_Creating_Holistic_Health_Records/links/6435429320f25554da2558ca/Batch-and-Streaming-Data-Ingestion-towards-Creating-Holistic-Health-Records.pdf" target="_blank">[Link]</a>
-                        <br>• [J03] A. Kiourtis, A. Giannetsos, S. A. Menesidou, A. Mavrogiorgou, <b>C. Symvoulidis</b>, A. Graziani, S. Kleftakis, K. Mavrogiorgos, N. Zafeiropoulos, C. A. Gkolias, D. Kyriazis, 2023, "Identity management standards: A literature review", <i>Computer and Informatics</i>, DergiPark Akademik. <a href="https://dergipark.org.tr/en/pub/ci/issue/76082/1253111" target="_blank">[Link]</a>
-                        <br>• [J02] I. Lazic, F. Agullo, S. Ausso, B. Alves, C. Barelle, J. L. Berral, P. Bizopoulos, O. Bunduc, I. Chouvarda, D. Dominguez, D. Filos, A. Gutierrez-Torre, I. Hesso, N. Jakovljević, R. Kayyali, M. Kogut-Czarkowska, A. Kosvyra, A. Lalas, M. Lavdaniti, T. Loncar-Turukalo, S. Martinez-Alabart, N. Michas, S. Nabhani-Gebara, A. Raptopoulos, Y. Roussakis, E. Stalika, <b>C. Symvoulidis</b>, O. Tsave, K. Votis, A. Charalambous, 2022, "The holistic perspective of the INCISIVE project—artificial intelligence in screening mammography", <i>Applied Sciences</i>, MDPI. <a href="https://www.mdpi.com/2076-3417/12/17/8755" target="_blank">[Link]</a>
-                        <br>• [J01] <b>C. Symvoulidis</b>, G. Marinos, A. Kiourtis, A. Mavrogiorgou, D. Kyriazis, 2022, "HealthFetch: An Influence-Based, Context-Aware Prefetch Scheme in Citizen-Centered Health Storage Clouds", <i>Future Internet</i>, MDPI. <a href="https://www.mdpi.com/1999-5903/14/4/112" target="_blank">[Link]</a>
-                    <br><br>
-                    <b>Book Chapters</b>
-                        <br>• [B01] A. Gutierrez-Torre, F. Agulló López, P. Laras, <b>C. Symvoulidis</b>, 2025, "Architectures and Platforms for Trustworthy AI: Cloud Technologies and Federated Approaches", <i>Trustworthy AI in Cancer Imaging Research</i> (pp. 169-194), Springer International Publishing. <a href="https://link.springer.com/chapter/10.1007/978-3-031-89963-8_8" target="_blank">[Link]</a>
-                    <br><br>
-                    <b>Conference Papers</b>
-                        <br>• [C22] G. Benos, K. Koutsoukos, <b>C. Symvoulidis</b>, D. Drakoulis, 2024, "Enhancing International Security: A Secure Biometric Data Sharing Framework for Effective Cross-Border Crime and Terrorism Prevention", In <i>2024 IEEE International Conference on Big Data (BigData2024)</i> (pp. 2690-2696), IEEE. <a href="https://ieeexplore.ieee.org/abstract/document/10825067" target="_blank">[Link]</a>
-                        <br>• [C21] K. Kyriakou, A. Apostolaras, P. Velentzas, G. Benos, K. Koutsoukos, <b>C. Symvoulidis</b>, K. Liang, Z. Shi, A. Leonidis, K. Miniadou, E. Veroni, S. Evangelatos, G. T. Papadopoulos, T. Korakis, 2024, "A Secure and Trustworthy Biometric Data Ecosystem for Cross-border Suspect Identification", In <i>2024 IEEE International Conference on Big Data (BigData2024)</i> (pp. 2762-2771), IEEE. <a href="https://ieeexplore.ieee.org/abstract/document/10826113" target="_blank">[Link]</a>
-                        <br>• [C20] C. Sardianos, <b>C. Symvoulidis</b>, M. Schloegl, I. Varlamis, G. T. Papadopoulos, 2024, "Exploring Machine Learning Algorithms for Infection Detection Using GC-IMS Data: A Preliminary Study", In <i>2024 5th International Conference in Electronic Engineering, Information Technology & Education (EEITE 2024)</i> (pp. 1-7), IEEE. <a href="https://ieeexplore.ieee.org/abstract/document/10654431" target="_blank">[Link]</a>
-                        <br>• [C19] <b>C. Symvoulidis</b>, E. Paraskevoulakou, A. Kiourtis, A. Mavrogiorgou,  D. Kyriazis, 2024, "Dynamic Resource Allocation on the Edge: A Causal and Contextually-Aware Machine Learning Approach", In <i>2024 10th Intelligent Systems Conference (IntelliSys 2024)</i> (pp. 300-313), Springer International Publishing. <a href="https://link.springer.com/chapter/10.1007/978-3-031-66336-9_21" target="_blank">[Link]</a>
-                        <br>• [C18] <b>[BEST PAPER AWARD]</b> E. Paraskevoulakou, J. D. Totow Tom-Ata, <b>C. Symvoulidis</b>, D. Kyriazis, 2024, "Enhancing Cloud-Based Application Component Placement with AI-Driven Operations", In <i>2024 14th IEEE Annual Computing and Communication Workshop and Conference (CCWC 2024)</i> (pp. 687-694), IEEE. <a href="https://ieeexplore.ieee.org/document/10427694" target="_blank">[Link]</a>
-                        <br>• [C17] <b>[BEST PAPER AWARD]</b> <b>C. Symvoulidis</b>, A. Kiourtis, A. Mavrogiorgou,  J. D. Totow Tom-Ata, G. Manias, D. Kyriazis, 2023, "Dynamic Deployment Prediction and Configuration in Hybrid Cloud / Edge Computing Environments using Influence-Based Learning", In <i>2023 10th IEEE International Conference on Electrical Engineering, Computer Science and Informatics (EECSI 2023)</i> (pp. 315-320), IEEE. <a href="https://ieeexplore.ieee.org/document/10295768" target="_blank">[Link]</a>
-                        <br>• [C16] J. D. Totow Tom-Ata, K. Kritikos, M. A. Di Girolamo, E. Paraskevoulakou, <b>C. Symvoulidis</b>, D. Kyriazis, 2023, "Polymorphic Cloud Application Design Assisted by Open Source Software Classification", In <i>2023 5th International Communication Engineering and Cloud Computing Conference (CECCC 2023)</i> (pp. 35-42), IEEE. <a href="https://ieeexplore.ieee.org/abstract/document/10560739" target="_blank">[Link]</a>
-                        <br>• [C15] A. Kiourtis, A. Mavrogiorgou, G. Makridis, <b>C. Symvoulidis</b>, K. Mavrogiorgos, D. Kyriazis, 2023, "A Practical Guide to Green Computing for Manufacturers, Businesses, and Individuals", In <i>2023 34th Conference of Open Innovations Association (FRUCT 2023)</i> (pp. 245-251). <a href="https://fruct.org/publications/volume-34/acm34/files/Kio.pdf" target="_blank">[Link]</a>
-                        <br>• [C14] G. Marinos, <b>C. Symvoulidis</b>, D. Kyriazis, 2022, "K-Medoids-Surv: A Patients Risk Stratification Algorithm Considering Censored Data", In <i>2022 21st International Conference on Artificial Intelligence and Soft Computing (ICAISC 2022)</i> (pp.127-140), Springer International Publishing. <a href="https://link.springer.com/chapter/10.1007/978-3-031-23480-4_11" target="_blank">[Link]</a>
-                        <br>• [C13] A. Kiourtis, A. Mavrogiorgou, K. Mavrogiorgos, D. Kyriazis, A. Graziani, <b>C. Symvoulidis</b>, G. Bella, S. Bocca, F. Torelli, 2022, "Electronic Health Records at People’s Hands Across Europe: The InteropEHRate Protocols". In <i>2022 19th International Conference on Wearable Micro and Nano Technologies for Personalized Health (pHealth 2022)</i> (pp. 145-150). IOS Press. <a href="https://books.google.gr/books?hl=en&lr=&id=cuufEAAAQBAJ&oi=fnd&pg=PA145&dq=Kiourtis,+A.,+Mavrogiorgou+A.,+Mavrogiorgos+K.,+Kyriazis+D.,+Graziani+A.,+Symvoulidis+C.,+Bella+G.,+Bocca+S.,+Torelli+F.+(2022,+November).+Electronic+Health+Records+at+People%E2%80%99s+Hands+Across+Europe:+The+InteropEHRate+Protocols.+In+pHealth+2022,+pp.+145-15&ots=rLHcxHyxRE&sig=r8Z_XYH-SZ6Zfrq_HcoojWZe9Og&redir_esc=y#v=onepage&q&f=false" target="_blank">[Link]</a>
-                        <br>• [C12] S. Dimopoulou, <b>C. Symvoulidis</b>, K. Koutsoukos, A. Kiourtis, A. Mavrogiorgou, D. Kyriazis, 2022, "Mobile Anonymization and Pseudonymization of Structured Health Data for Research", In <i>2022 7th IEEE International Conference On Mobile And Secure Services (MOBISECSERV 2022)</i> (pp. 1-6), IEEE. <a href="https://ieeexplore.ieee.org/document/9606243" target="_blank">[Link]</a>
-                        <br>• [C11] K. Koutsoukos, <b>C. Symvoulidis</b>, A. Kiourtis, A. Mavrogiorgou, S. Dimopoulou, D. Kyriazis, 2022, "Emergency Health Protocols Supporting Health Data Exchange, Cloud Storage, and Indexing", In <i>2022 15th International Conference on Health Informatics (HEALTHINF 2022)</i> (pp. 597-604), SCITEPRESS. <a href="https://www.researchgate.net/profile/Chrysostomos-Symvoulidis/publication/358836786_Emergency_Health_Protocols_Supporting_Health_Data_Exchange_Cloud_Storage_and_Indexing/links/623a160cadf1e863369c3f8d/Emergency-Health-Protocols-Supporting-Health-Data-Exchange-Cloud-Storage-and-Indexing.pdf" target="_blank">[Link]</a>
-                        <br>• [C10] G. Marinos, <b>C. Symvoulidis</b>, D. Kyriazis, 2021, "MICSurv: Medical Image Clustering for Survival risk group identification", In <i>2021 4th IEEE International Conference on Bio-Engineering for Smart Technologies (BioSMART 2021)</i> (pp. 1-4), IEEE. <a href="https://ieeexplore.ieee.org/abstract/document/9677838" target="_blank">[Link]</a>
-                        <br>• [C09] A. Kiourtis, A. Graziani, A. Mavrogiorgou, <b>C. Symvoulidis</b>, K. Mavrogiorgos, D. Kyriazis, 2021, "A Health Information Exchange Protocol Supporting Bluetooth-based Messages", In <i>2021 IEEE International Conference on Information Systems and Advanced Technologies (ICISAT 2021)</i> (pp. 1-6), IEEE. <a href="https://ieeexplore.ieee.org/abstract/document/9678450" target="_blank">[Link]</a>
-                        <br>• [C08] <b>C. Symvoulidis</b>, A. Mavrogiorgou, A. Kiourtis, G. Marinos, D. Kyriazis, 2021, "Facilitating Health Information Exchange in Medical Emergencies", In <i>2021 9th IEEE International Conference on e-Health and Bioengineering (EHB 2021)</i> (pp. 1-4), IEEE. <a href="https://ieeexplore.ieee.org/abstract/document/9657592" target="_blank">[Link]</a>
-                        <br>• [C07] <b>C. Symvoulidis</b>, A. Kiourtis, A. Mavrogiorgou, D. Kyriazis, 2021, "Healthcare Provision in the Cloud: An EHR Object Store-based Cloud Used for Emergency", In <i>2021 14th International Conference on Health Informatics (HEALTHINF 2021)</i> (pp. 435-442), SCITEPRESS. <a href="https://pdfs.semanticscholar.org/1245/ca9b3413835b8a6072a0b7d2afe80856eba3.pdf" target="_blank">[Link]</a> 
-                        <br>• [C06] A. Kiourtis, A. Mavrogiorgou, <b>C. Symvoulidis</b>, C. Tsigkounis,D. Kyriazis, 2021, "Indexing of Cloud Stored Electronic Health Records for Consented Third Party Accessing", In <i>2021 28th Conference of the Open Innovations Association (FRUCT 2021)</i> (pp. 158-166), IEEE. <a href="https://ieeexplore.ieee.org/abstract/document/9347651?casa_token=WlscyPRk1kUAAAAA:WkLtvJ3uWsPcmnWphdBejg6d6LNDsBotCrOarTKzmewvgtEA4td5jS2r90O3OwA4K5OuggEB" target="_blank">[Link]</a>
-                        <br>• [C05] I. Tsoumas, <b>C. Symvoulidis</b>, D. Kyriazis, D., 2021, "Learning a generalized matrix from multi-graphs topologies towards microservices recommendations", In <i>2020 6th Intelligent Systems Conference (IntelliSys 2020)</i> (pp. 693-702), Springer International Publishing. <a href="https://link.springer.com/chapter/10.1007/978-3-030-55187-2_50" target="_blank">[Link]</a>
-                        <br>• [C04] I. Tsoumas, <b>C. Symvoulidis</b>, D. Kyriazis, P. Gouvas, A. Zafeiropoulos, J. Melian, J. Sterle, 2019, "Modelling 5G Cloud-Native Applications by Exploiting the Service Mesh Paradigm", In <i>2019 European, Mediterranean, and Middle Eastern Conference on Information Systems (EMCIS 2019)</i> (pp. 151-162), Springer International Publishing. <a href="https://link.springer.com/chapter/10.1007/978-3-030-44322-1_12" target="_blank">[Link]</a>  
-                        <br>• [C03] <b>C. Symvoulidis</b>, I. Tsoumas, D. Kyriazis, 2019, "Towards the identification of context in 5G infrastructures, In <i>SAI Computing Conference</i> (pp. 406-418), Springer International Publishing. <a href="https://link.springer.com/chapter/10.1007/978-3-030-22868-2_31" target="_blank">[Link]</a>
-                        <br>• [C02] M. Touloupou, E. Kapassa, <b>C. Symvoulidis</b>, P. Stavrianos, D. Kyriazis, 2019, "An integrated SLA management framework in a 5G environment", In <i>2019 22nd IEEE Conference on Innovation in Clouds, Internet and Networks and Workshops (ICIN)</i> (pp. 233-235), IEEE. <a href="https://ieeexplore.ieee.org/abstract/document/8685916" target="_blank">[Link]</a>
-                        <br>• [C01] A. Mavrogiorgou, A. Kiourtis, <b>C. Symvoulidis</b>, D. Kyriazis, 2018, "Capturing the reliability of unknown devices in the IoT world", In <i>2018 5th IEEE International Conference on Internet of Things: Systems, Management and Security</i> (pp. 62-69), IEEE. <a href="https://ieeexplore.ieee.org/abstract/document/8554720" target="_blank">[Link]</a>
-                </p>
-            </section>
-            
-            <!-- Work experience -->
-            <section class="gallery" id="work">
-                <h3 class="w3_head mb-5">Work Experience</h3>
-                <p class="banp mt-5">
-                    • 2024.10 - <i>Today</i>, Technical Project Manager, Gruppo Maggioli SpA, Athens, Greece. 
-                    <br>• 2022.08 - <i>Today</i>, Technical Project Manager, Telesto Technologies Ltd., Athens, Greece. 
-                    <br>• 2022.05 - 2024.10, Technical Project Manager / Technical Coordinator, Thridium Ltd., London, UK. 
-                    <br>• 2019.06 - 2022.11, Research Associate, BYTE Computer S.A., Athens, Greece.
-                    <br>• 2019.01 - 2021.21, Project Manager, SingularLogic S.A., Athens, Greece.
-                    <br>• 2017.06 - 2020.10, Research Associate, University of Piraeus, Piraeus, Greece.
-                </p>
-            </section>
-
-            <!-- Projects -->
-            <section class="slide-wrapper" id="projects">
-                <h3 class="w3_head mb-5">Research Projects</h3>
-                <p class="banp mt-5">
-                    • 2024.10 - <i>Today</i>, EMBRACE - pan-European Management of Biological toxin incidents through standaRdisAtion initiatives for Crisis response Enhancement, Telesto Technologies Ltd., Athens, Greece.
-                    • 2024.10 - <i>Today</i>, SEARCH - Synthetic hEalthcare dAta goveRnanCe Hub, Gruppo Maggioli SpA, Athens, Greece.
-                    <br>• 2022.10 - 2025.12, ONELAB - Orchestrating next-generation mobile modular laboratories for pandemic monitoring preparedness, Telesto Technologies Ltd., Athens, Greece.
-                    <br>• 2020.10 - 2024.04, INCISIVE - A multimodal AI-based toolbox and an interoperable health imaging repository for the empowerment of imaging analysis related to the diagnosis, prediction and follow-up of cancer, Thridium Ltd., London, UK.
-                    <br>• 2019.01 - 2022.09, InteropEHRate - Interoperable EHRs at user edge, BYTE Computer S.A., Athens, Greece.
-                    <br>• 2022.04 - 2022.06, LeADS - Legality attentive data scientists, BYTE Computer S.A., Athens, Greece. 
-                    <br>• 2018.01 - 2020.12, BigDataStack - High-performance data-centric stack for big data applications and operations, SingularLogic S.A., Athens, Greece.
-                    <br>• 2017.06 - 2020.07, MATILDA - A holistic, innovative framework for the design, development and orchestration of 5G-ready applications and network services over sliced programmable infrastructure, University of Piraeus Reseach Centre, Piraeus, Greece.
-                </p>
-            </section>
-            
-
-            <!-- Teaching experience -->
-            <section class="gallery" id="teaching">
-                <h3 class="w3_head mb-5">Teaching Experience</h3>
-                <p class="banp mt-5">
-                    <b>Lecturing</b>
-                        <br>• 2025.05 - 2025.06, Course on Neural Nets and Deep Learning, MSc Programme in Advanced Information Systems, Department of Digital Systems, University of Piraeus, Greece. 
-                        <br>• 2025.05 - 2026.06, Course on Neural Nets and Deep Learning, MSc Programme in Big Data and Analytics, Department of Digital Systems, University of Piraeus, Greece. 
-                    <br><br>
-                    <b>Teaching Assistant</b> 
-                        <br>• 2017.09 - 2023.09, DS-501 - C Programming (Lab), Department of Digital Systems, University of Piraeus, Greece. 
-                        <br>• 2019.09 - 2023.09, DS-512 - Infomation Systems (Lab), Department of Digital Systems, University of Piraeus, Greece. 
-                    <br><br>
-                    <b>Final Year Projects (DS-907)</b>
-                        <br>• 2023-06, D. Kozoni, "Comparative analysis of Explainable Artificial Intelligence (XAI) tools", Undergraduate, Department of Digital Systems, University of Piraeus, Greece.
-                </p>
-            </section>
-
-            <!-- Awards and services -->
-            <section class="slide-wrapper" id="awards">
-                <h3 class="w3_head mb-5">Awards and Services</h3>
-                <p class="banp mt-5">
-                    <b>Awards</b>
-                        <br>• 2024, Best paper award in 14th IEEE Annual Computing and Communication Workshop and Conference (CCWC 2024).
-                        <br>• 2023, Best paper award in 10th IEEE International Conference on Electrical Engineering, Computer Science and Informatics (EECSI 2023).
-                    <br><br>
-                    <b>Reviewer</b>
-                        <br>• Computer Communications Journal, Elsevier.
-                        <br>• Scientific Reports Journal, Springer Nature.
-                        <br>• Concurrency and Computation: Practice and Experience (CCPE) Journal, Wiley.
-                        <br>• Trustworthy AI in Cancer Imaging Research Book, Springer Nature. 
-                        <br>• International Conference on Cloud Computing and Services Science (CLOSER), Institute for Systems and Technologies of Information, Control and Communication (INSTICC).
-                </p>
-            </section>
-
-            <!-- Skills and interests -->
-            <section class="gallery" id="skills">
-                <h3 class="w3_head mb-5">Skills and Interests</h3>
-                <p class="banp mt-5">
-                    • Interests: Travelling, Music, Mountain Biking, Distance Running, Trail Running, CrossFit, Movies, Gaming.
-                    <br>• Programming Languages: Python, Java, Java for Android, C, R.
-                    <br>• Machine Learning: TensorFlow, Keras, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn.
-                    <br>• Web Development: Flask, FastAPI, Streamlit, Spring, JSON, XML, JWT, RESTful APIs, Postman.
-                    <br>• Databases: MySQL, MongoDB, MariaDB, MS SQL Server, MinIO.
-                    <br>• Big Data: Hadoop, Spark, Kafka, Flink.
-                    <br>• Cloud Computing: Docker, Docker Compose, Prometheus, Grafana.
-                    <br>• Paper writing: LaTeX, Microsoft Word.
-                    <br>• Operating Systems: Linux (Ubuntu, Debian, CentOS), Mac, Windows.
-                    <br>• Office: Microsoft Office, LibreOffice, Google Docs.
-                    <br>• Project Management: Azure DevOps, Trello. 
-                    <br>• Version Control: Git, GitHub, GitLab.
-                    <br>• IDEs: PyCharm, VS Code.
-                    <br>• Languages: Greek (native), English (fluent), German (basic).
-                </p>
-            </section>
-
-            <section class="wedo" id="cpy">
-                <p>Copyright &copy; 2025. Chrysostomos Symvoulidis. All rights reserved.</p>
-            </section>
+      <p class="hero-bio">
+        AI Researcher and Technical Manager with experience in designing and developing AI-driven solutions
+        in healthcare, smart cities, and distributed systems. Worked on research and innovation projects
+        involving Cloud and Edge Computing, Health Information Exchange, AI medical imaging, Federated
+        Learning, and intelligent digital platforms. Experienced in technical leadership, system
+        architecture, product management, and AI services, including LLM applications and chatbots.
+        Actively involved in European and national R&amp;D projects, proposal writing, and technical
+        coordination, focused on translating research into high-impact solutions.
+      </p>
+      <div class="hero-keywords">
+        <span class="kw">Causal Discovery</span>
+        <span class="kw">Causal Inference</span>
+        <span class="kw">Cloud Computing</span>
+        <span class="kw">Deep Learning</span>
+        <span class="kw">Edge Computing</span>
+        <span class="kw">Machine Learning</span>
+      </div>
+      <div class="hero-links">
+        <a class="btn btn-primary" href="https://drive.google.com/file/d/1tVOj8I-8ZL9duYJH6j20ao8247o5pyZG/view?usp=sharing" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Download CV
+        </a>
+        <a class="btn" href="https://scholar.google.com/citations?user=R6s73JIAAAAJ" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Google Scholar
+        </a>
+        <a class="btn" href="https://github.com/csymvoul" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+        <a class="btn" href="https://www.linkedin.com/in/csymvoulidis" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a class="btn" href="mailto:simvoul@unipi.gr">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Contact
+        </a>
+      </div>
+      </div><!-- end text col -->
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">31<em>+</em></span>
+          <span class="hero-stat-label">Publications</span>
         </div>
-    </body>
+        <div class="hero-stat">
+          <span class="hero-stat-num">8</span>
+          <span class="hero-stat-label">R&amp;D Projects</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">2</span>
+          <span class="hero-stat-label">Best Paper Awards</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">9<em>+</em></span>
+          <span class="hero-stat-label">Years Experience</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ─── EDUCATION ─── -->
+  <section id="education" class="section">
+    <div class="section-header reveal">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Education</h2>
+    </div>
+    <div class="two-col stagger">
+      <div class="card">
+        <div class="card-title">Degrees</div>
+        <div class="tl">
+          <div class="tl-item">
+            <div class="tl-date">2024</div>
+            <div>
+              <div class="tl-title">PhD in Artificial Intelligence</div>
+              <div class="tl-sub">Dept. of Digital Systems, University of Piraeus<br>Advisor: Prof. Dimosthenis Kyriazis</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">2018</div>
+            <div>
+              <div class="tl-title">MSc in Big Data and Analytics</div>
+              <div class="tl-sub">Dept. of Digital Systems, University of Piraeus</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">2016</div>
+            <div>
+              <div class="tl-title">BSc in Computer Science</div>
+              <div class="tl-sub">Dept. of Digital Systems, University of Piraeus</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Thesis</div>
+        <p style="font-size:14px;color:var(--text-2);line-height:1.75">
+          Design of causal and contextual information extraction and data enrichment methods,
+          with emphasis on artificial intelligence-driven optimization algorithms for cloud
+          and edge computing.
+        </p>
+        <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:6px">
+          <span class="tag">Causal Discovery</span>
+          <span class="tag">Cloud Computing</span>
+          <span class="tag">Edge Computing</span>
+          <span class="tag">Deep Learning</span>
+          <span class="tag">Optimization</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WORK ─── -->
+  <section id="work" class="section">
+    <div class="section-header reveal">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Work experience</h2>
+    </div>
+    <div class="work-list stagger">
+      <div class="work-item">
+        <div class="work-date">2024.10 &ndash; today</div>
+        <div>
+          <div class="work-title">Researcher | Technical Manager</div>
+          <div class="work-org">Gruppo Maggioli SpA &middot; Athens, Greece</div>
+        </div>
+      </div>
+      <div class="work-item">
+        <div class="work-date">2022.08 &ndash; today</div>
+        <div>
+          <div class="work-title">Researcher | Technical Manager</div>
+          <div class="work-org">Telesto Technologies Ltd. &middot; Athens, Greece</div>
+        </div>
+      </div>
+      <div class="work-item">
+        <div class="work-date">2022.05 &ndash; 2024.10</div>
+        <div>
+          <div class="work-title">Researcher | Technical Coordinator</div>
+          <div class="work-org">Thridium Ltd. &middot; London, UK</div>
+        </div>
+      </div>
+      <div class="work-item">
+        <div class="work-date">2019.06 &ndash; 2022.11</div>
+        <div>
+          <div class="work-title">Research Associate</div>
+          <div class="work-org">BYTE Computer S.A. &middot; Athens, Greece</div>
+        </div>
+      </div>
+      <div class="work-item">
+        <div class="work-date">2019.01 &ndash; 2021.12</div>
+        <div>
+          <div class="work-title">Research Associate</div>
+          <div class="work-org">SingularLogic S.A. &middot; Athens, Greece</div>
+        </div>
+      </div>
+      <div class="work-item">
+        <div class="work-date">2017.06 &ndash; 2020.10</div>
+        <div>
+          <div class="work-title">Research Associate</div>
+          <div class="work-org">University of Piraeus &middot; Piraeus, Greece</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section id="projects" class="section">
+    <div class="section-header reveal">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Research projects</h2>
+    </div>
+    <div class="proj-grid stagger">
+      <div class="proj-card">
+        <span class="proj-status status-active">Active</span>
+        <div class="proj-name">EMBRACE</div>
+        <div class="proj-desc">Pan-European Management of Biological toxin incidents through standardisation initiatives for Crisis response Enhancement</div>
+        <div class="proj-dates">2024.10 &ndash; today &middot; Telesto Technologies Ltd.</div>
+      </div>
+      <div class="proj-card">
+        <span class="proj-status status-active">Active</span>
+        <div class="proj-name">SEARCH</div>
+        <div class="proj-desc">Synthetic Healthcare Data Governance Hub</div>
+        <div class="proj-dates">2024.10 &ndash; today &middot; Gruppo Maggioli SpA</div>
+      </div>
+      <div class="proj-card">
+        <span class="proj-status status-done">Completed</span>
+        <div class="proj-name">ONELAB</div>
+        <div class="proj-desc">Orchestrating next-generation mobile modular laboratories for pandemic monitoring preparedness</div>
+        <div class="proj-dates">2022.10 &ndash; 2025.12 &middot; Telesto Technologies Ltd.</div>
+      </div>
+      <div class="proj-card">
+        <span class="proj-status status-done">Completed</span>
+        <div class="proj-name">INCISIVE</div>
+        <div class="proj-desc">Multimodal AI-based toolbox and interoperable health imaging repository for cancer diagnosis, prediction and follow-up</div>
+        <div class="proj-dates">2020.10 &ndash; 2024.04 &middot; Thridium Ltd.</div>
+      </div>
+      <div class="proj-card">
+        <span class="proj-status status-done">Completed</span>
+        <div class="proj-name">InteropEHRate</div>
+        <div class="proj-desc">Interoperable Electronic Health Records at user edge</div>
+        <div class="proj-dates">2019.01 &ndash; 2022.09 &middot; BYTE Computer S.A.</div>
+      </div>
+      <div class="proj-card">
+        <span class="proj-status status-done">Completed</span>
+        <div class="proj-name">BigDataStack</div>
+        <div class="proj-desc">High-performance data-centric stack for big data applications and operations</div>
+        <div class="proj-dates">2018.01 &ndash; 2020.12 &middot; SingularLogic S.A.</div>
+      </div>
+      <div class="proj-card">
+        <span class="proj-status status-done">Completed</span>
+        <div class="proj-name">LeADS</div>
+        <div class="proj-desc">Legality attentive data scientists</div>
+        <div class="proj-dates">2022.04 &ndash; 2022.06 &middot; BYTE Computer S.A.</div>
+      </div>
+      <div class="proj-card">
+        <span class="proj-status status-done">Completed</span>
+        <div class="proj-name">MATILDA</div>
+        <div class="proj-desc">Holistic framework for 5G-ready applications and network services over sliced programmable infrastructure</div>
+        <div class="proj-dates">2017.06 &ndash; 2020.07 &middot; University of Piraeus Research Centre</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PUBLICATIONS ─── -->
+  <section id="publications" class="section">
+    <div class="section-header reveal">
+      <span class="section-num">04</span>
+      <h2 class="section-title">Publications</h2>
+    </div>
+    <div class="pub-filter reveal">
+      <button class="filter-btn active" data-filter="all">All (31)</button>
+      <button class="filter-btn" data-filter="journal">Journals (8)</button>
+      <button class="filter-btn" data-filter="book">Book chapters (1)</button>
+      <button class="filter-btn" data-filter="conference">Conference (22)</button>
+    </div>
+    <div class="pub-list">
+
+      <!-- Journals -->
+      <div class="pub-item reveal" data-type="journal">
+        <div class="pub-meta"><span class="badge badge-blue">Journal 2026</span></div>
+        <div class="pub-title">A three-tier AI-based approach for dynamic application placement in cloud–edge environments</div>
+        <div class="pub-authors">E. Paraskevoulakou, <strong>C. Symvoulidis</strong>, P. Karamolegkos, G. Kousiouris, D. Kyriazis</div>
+        <div class="pub-venue"><em>Future Generation Computer Systems</em>, Elsevier <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167739X26001457" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="journal">
+        <div class="pub-meta"><span class="badge badge-blue">Journal 2026</span></div>
+        <div class="pub-title">Evaluation of the INCISIVE services in cancer imaging: a feasibility study</div>
+        <div class="pub-authors">L. Zacharias, I. Hesso, R. Kayyali, <strong>C. Symvoulidis</strong>, et al.</div>
+        <div class="pub-venue"><em>Seminars in Oncology Nursing</em>, Elsevier <a href="https://www.sciencedirect.com/science/article/abs/pii/S0749208125002712" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="journal">
+        <div class="pub-meta"><span class="badge badge-blue">Journal 2023</span></div>
+        <div class="pub-title">A user mobility-based data placement strategy in a hybrid cloud/edge environment using a causal-aware deep learning network</div>
+        <div class="pub-authors"><strong>C. Symvoulidis</strong>, A. Kiourtis, G. Marinos, J. D. Totow Tom-Ata, G. Manias, A. Mavrogiorgou, D. Kyriazis</div>
+        <div class="pub-venue"><em>IEEE Transactions on Computers</em>, IEEE <a href="https://ieeexplore.ieee.org/document/10242108" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="journal">
+        <div class="pub-meta"><span class="badge badge-blue">Journal 2023</span></div>
+        <div class="pub-title">Multilingual text categorization and sentiment analysis: a comparative analysis of multilingual approaches for classifying twitter data</div>
+        <div class="pub-authors">G. Manias, A. Mavrogiorgou, A. Kiourtis, <strong>C. Symvoulidis</strong>, D. Kyriazis</div>
+        <div class="pub-venue"><em>Neural Computing and Applications</em>, Springer <a href="https://link.springer.com/article/10.1007/s00521-023-08629-3" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="journal">
+        <div class="pub-meta"><span class="badge badge-blue">Journal 2023</span></div>
+        <div class="pub-title">Batch and streaming data ingestion towards creating holistic health records</div>
+        <div class="pub-authors">A. Mavrogiorgou, A. Kiourtis, G. Manias, <strong>C. Symvoulidis</strong>, D. Kyriazis</div>
+        <div class="pub-venue"><em>Emerging Science Journal</em>, Ital Publication <a href="https://www.researchgate.net/publication/368527014" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="journal">
+        <div class="pub-meta"><span class="badge badge-blue">Journal 2023</span></div>
+        <div class="pub-title">Identity management standards: a literature review</div>
+        <div class="pub-authors">A. Kiourtis, A. Giannetsos, <strong>C. Symvoulidis</strong>, et al.</div>
+        <div class="pub-venue"><em>Computer and Informatics</em>, DergiPark <a href="https://dergipark.org.tr/en/pub/ci/issue/76082/1253111" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="journal">
+        <div class="pub-meta"><span class="badge badge-blue">Journal 2022</span></div>
+        <div class="pub-title">The holistic perspective of the INCISIVE project — artificial intelligence in screening mammography</div>
+        <div class="pub-authors">I. Lazic, F. Agullo, <strong>C. Symvoulidis</strong>, et al.</div>
+        <div class="pub-venue"><em>Applied Sciences</em>, MDPI <a href="https://www.mdpi.com/2076-3417/12/17/8755" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="journal">
+        <div class="pub-meta"><span class="badge badge-blue">Journal 2022</span></div>
+        <div class="pub-title">HealthFetch: an influence-based, context-aware prefetch scheme in citizen-centered health storage clouds</div>
+        <div class="pub-authors"><strong>C. Symvoulidis</strong>, G. Marinos, A. Kiourtis, A. Mavrogiorgou, D. Kyriazis</div>
+        <div class="pub-venue"><em>Future Internet</em>, MDPI <a href="https://www.mdpi.com/1999-5903/14/4/112" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+
+      <!-- Book -->
+      <div class="pub-item reveal" data-type="book">
+        <div class="pub-meta"><span class="badge badge-green">Book chapter 2025</span></div>
+        <div class="pub-title">Architectures and platforms for trustworthy AI: cloud technologies and federated approaches</div>
+        <div class="pub-authors">A. Gutierrez-Torre, F. Agull&oacute; L&oacute;pez, P. Laras, <strong>C. Symvoulidis</strong></div>
+        <div class="pub-venue"><em>Trustworthy AI in Cancer Imaging Research</em> (pp. 169–194), Springer <a href="https://link.springer.com/chapter/10.1007/978-3-031-89963-8_8" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+
+      <!-- Conferences -->
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2024</span></div>
+        <div class="pub-title">Enhancing international security: a secure biometric data sharing framework for cross-border crime and terrorism prevention</div>
+        <div class="pub-authors">G. Benos, K. Koutsoukos, <strong>C. Symvoulidis</strong>, D. Drakoulis</div>
+        <div class="pub-venue">IEEE BigData 2024 <a href="https://ieeexplore.ieee.org/abstract/document/10825067" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2024</span></div>
+        <div class="pub-title">A secure and trustworthy biometric data ecosystem for cross-border suspect identification</div>
+        <div class="pub-authors">K. Kyriakou, A. Apostolaras, <strong>C. Symvoulidis</strong>, et al.</div>
+        <div class="pub-venue">IEEE BigData 2024 <a href="https://ieeexplore.ieee.org/abstract/document/10826113" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2024</span></div>
+        <div class="pub-title">Exploring machine learning algorithms for infection detection using GC-IMS data: a preliminary study</div>
+        <div class="pub-authors">C. Sardianos, <strong>C. Symvoulidis</strong>, M. Schloegl, I. Varlamis, G. T. Papadopoulos</div>
+        <div class="pub-venue">EEITE 2024 <a href="https://ieeexplore.ieee.org/abstract/document/10654431" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2024</span></div>
+        <div class="pub-title">Dynamic resource allocation on the edge: a causal and contextually-aware machine learning approach</div>
+        <div class="pub-authors"><strong>C. Symvoulidis</strong>, E. Paraskevoulakou, A. Kiourtis, A. Mavrogiorgou, D. Kyriazis</div>
+        <div class="pub-venue">IntelliSys 2024 <a href="https://link.springer.com/chapter/10.1007/978-3-031-66336-9_21" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2024</span><span class="badge badge-gold">&#127942; Best paper</span></div>
+        <div class="pub-title">Enhancing cloud-based application component placement with AI-driven operations</div>
+        <div class="pub-authors">E. Paraskevoulakou, J. D. Totow Tom-Ata, <strong>C. Symvoulidis</strong>, D. Kyriazis</div>
+        <div class="pub-venue">IEEE CCWC 2024 <a href="https://ieeexplore.ieee.org/document/10427694" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2023</span><span class="badge badge-gold">&#127942; Best paper</span></div>
+        <div class="pub-title">Dynamic deployment prediction and configuration in hybrid cloud/edge computing environments using influence-based learning</div>
+        <div class="pub-authors"><strong>C. Symvoulidis</strong>, A. Kiourtis, A. Mavrogiorgou, J. D. Totow Tom-Ata, G. Manias, D. Kyriazis</div>
+        <div class="pub-venue">IEEE EECSI 2023 <a href="https://ieeexplore.ieee.org/document/10295768" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2023</span></div>
+        <div class="pub-title">Polymorphic cloud application design assisted by open source software classification</div>
+        <div class="pub-authors">J. D. Totow Tom-Ata, K. Kritikos, <strong>C. Symvoulidis</strong>, D. Kyriazis</div>
+        <div class="pub-venue">CECCC 2023 <a href="https://ieeexplore.ieee.org/abstract/document/10560739" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2023</span></div>
+        <div class="pub-title">A practical guide to green computing for manufacturers, businesses, and individuals</div>
+        <div class="pub-authors">A. Kiourtis, A. Mavrogiorgou, G. Makridis, <strong>C. Symvoulidis</strong>, D. Kyriazis</div>
+        <div class="pub-venue">FRUCT 2023 <a href="https://fruct.org/publications/volume-34/acm34/files/Kio.pdf" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2022</span></div>
+        <div class="pub-title">K-Medoids-Surv: a patients risk stratification algorithm considering censored data</div>
+        <div class="pub-authors">G. Marinos, <strong>C. Symvoulidis</strong>, D. Kyriazis</div>
+        <div class="pub-venue">ICAISC 2022 <a href="https://link.springer.com/chapter/10.1007/978-3-031-23480-4_11" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2022</span></div>
+        <div class="pub-title">Electronic health records at people's hands across Europe: the InteropEHRate protocols</div>
+        <div class="pub-authors">A. Kiourtis, A. Mavrogiorgou, <strong>C. Symvoulidis</strong>, et al.</div>
+        <div class="pub-venue">pHealth 2022 <a href="https://books.google.gr/books?id=cuufEAAAQBAJ" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2022</span></div>
+        <div class="pub-title">Mobile anonymization and pseudonymization of structured health data for research</div>
+        <div class="pub-authors">S. Dimopoulou, <strong>C. Symvoulidis</strong>, K. Koutsoukos, A. Kiourtis, A. Mavrogiorgou, D. Kyriazis</div>
+        <div class="pub-venue">IEEE MobiSecServ 2022 <a href="https://ieeexplore.ieee.org/document/9606243" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2022</span></div>
+        <div class="pub-title">Emergency health protocols supporting health data exchange, cloud storage, and indexing</div>
+        <div class="pub-authors">K. Koutsoukos, <strong>C. Symvoulidis</strong>, A. Kiourtis, A. Mavrogiorgou, S. Dimopoulou, D. Kyriazis</div>
+        <div class="pub-venue">HEALTHINF 2022 <a href="https://www.researchgate.net/publication/358836786" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2021</span></div>
+        <div class="pub-title">MICSurv: medical image clustering for survival risk group identification</div>
+        <div class="pub-authors">G. Marinos, <strong>C. Symvoulidis</strong>, D. Kyriazis</div>
+        <div class="pub-venue">IEEE BioSMART 2021 <a href="https://ieeexplore.ieee.org/abstract/document/9677838" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2021</span></div>
+        <div class="pub-title">A health information exchange protocol supporting Bluetooth-based messages</div>
+        <div class="pub-authors">A. Kiourtis, A. Graziani, A. Mavrogiorgou, <strong>C. Symvoulidis</strong>, K. Mavrogiorgos, D. Kyriazis</div>
+        <div class="pub-venue">IEEE ICISAT 2021 <a href="https://ieeexplore.ieee.org/abstract/document/9678450" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2021</span></div>
+        <div class="pub-title">Facilitating health information exchange in medical emergencies</div>
+        <div class="pub-authors"><strong>C. Symvoulidis</strong>, A. Mavrogiorgou, A. Kiourtis, G. Marinos, D. Kyriazis</div>
+        <div class="pub-venue">IEEE EHB 2021 <a href="https://ieeexplore.ieee.org/abstract/document/9657592" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2021</span></div>
+        <div class="pub-title">Healthcare provision in the cloud: an EHR object store-based cloud used for emergency</div>
+        <div class="pub-authors"><strong>C. Symvoulidis</strong>, A. Kiourtis, A. Mavrogiorgou, D. Kyriazis</div>
+        <div class="pub-venue">HEALTHINF 2021 <a href="https://pdfs.semanticscholar.org/1245/ca9b3413835b8a6072a0b7d2afe80856eba3.pdf" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2021</span></div>
+        <div class="pub-title">Indexing of cloud stored electronic health records for consented third party accessing</div>
+        <div class="pub-authors">A. Kiourtis, A. Mavrogiorgou, <strong>C. Symvoulidis</strong>, C. Tsigkounis, D. Kyriazis</div>
+        <div class="pub-venue">FRUCT 2021 <a href="https://ieeexplore.ieee.org/abstract/document/9347651" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2021</span></div>
+        <div class="pub-title">Learning a generalized matrix from multi-graphs topologies towards microservices recommendations</div>
+        <div class="pub-authors">I. Tsoumas, <strong>C. Symvoulidis</strong>, D. Kyriazis</div>
+        <div class="pub-venue">IntelliSys 2020 <a href="https://link.springer.com/chapter/10.1007/978-3-030-55187-2_50" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2019</span></div>
+        <div class="pub-title">Modelling 5G cloud-native applications by exploiting the service mesh paradigm</div>
+        <div class="pub-authors">I. Tsoumas, <strong>C. Symvoulidis</strong>, D. Kyriazis, P. Gouvas, A. Zafeiropoulos, J. Melian, J. Sterle</div>
+        <div class="pub-venue">EMCIS 2019 <a href="https://link.springer.com/chapter/10.1007/978-3-030-44322-1_12" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2019</span></div>
+        <div class="pub-title">Towards the identification of context in 5G infrastructures</div>
+        <div class="pub-authors"><strong>C. Symvoulidis</strong>, I. Tsoumas, D. Kyriazis</div>
+        <div class="pub-venue">SAI Computing Conference 2019 <a href="https://link.springer.com/chapter/10.1007/978-3-030-22868-2_31" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2019</span></div>
+        <div class="pub-title">An integrated SLA management framework in a 5G environment</div>
+        <div class="pub-authors">M. Touloupou, E. Kapassa, <strong>C. Symvoulidis</strong>, P. Stavrianos, D. Kyriazis</div>
+        <div class="pub-venue">IEEE ICIN 2019 <a href="https://ieeexplore.ieee.org/abstract/document/8685916" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+      <div class="pub-item reveal" data-type="conference">
+        <div class="pub-meta"><span class="badge badge-gray">Conference 2018</span></div>
+        <div class="pub-title">Capturing the reliability of unknown devices in the IoT world</div>
+        <div class="pub-authors">A. Mavrogiorgou, A. Kiourtis, <strong>C. Symvoulidis</strong>, D. Kyriazis</div>
+        <div class="pub-venue">IEEE IoTSMS 2018 <a href="https://ieeexplore.ieee.org/abstract/document/8554720" target="_blank" rel="noopener">[Link]</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── TEACHING ─── -->
+  <section id="teaching" class="section">
+    <div class="section-header reveal">
+      <span class="section-num">05</span>
+      <h2 class="section-title">Teaching</h2>
+    </div>
+    <div class="teach-group reveal">
+      <div class="teach-group-title">Lecturing</div>
+      <div class="tl">
+        <div class="tl-item">
+          <div class="tl-date">2025 &ndash; 2026</div>
+          <div>
+            <div class="tl-title">Neural Networks &amp; Deep Learning</div>
+            <div class="tl-sub">MSc in Advanced Information Systems &amp; MSc in Big Data and Analytics &middot; University of Piraeus</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="teach-group reveal">
+      <div class="teach-group-title">Teaching assistant</div>
+      <div class="tl">
+        <div class="tl-item">
+          <div class="tl-date">2017 &ndash; 2023</div>
+          <div>
+            <div class="tl-title">DS-501 C Programming (Lab)</div>
+            <div class="tl-sub">Dept. of Digital Systems, University of Piraeus</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2019 &ndash; 2023</div>
+          <div>
+            <div class="tl-title">DS-512 Information Systems (Lab)</div>
+            <div class="tl-sub">Dept. of Digital Systems, University of Piraeus</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="teach-group reveal">
+      <div class="teach-group-title">Final year project supervision</div>
+      <div class="tl">
+        <div class="tl-item">
+          <div class="tl-date">2023</div>
+          <div>
+            <div class="tl-title">D. Kozoni</div>
+            <div class="tl-sub">"Comparative analysis of Explainable Artificial Intelligence (XAI) tools" &middot; Undergraduate, University of Piraeus</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── AWARDS ─── -->
+  <section id="awards" class="section">
+    <div class="section-header reveal">
+      <span class="section-num">06</span>
+      <h2 class="section-title">Awards &amp; services</h2>
+    </div>
+    <div class="two-col stagger">
+      <div class="card">
+        <div class="card-title">Awards</div>
+        <div class="tl">
+          <div class="tl-item">
+            <div class="tl-date">2024</div>
+            <div>
+              <span class="badge badge-gold">&#127942; Best paper</span>
+              <div class="tl-sub" style="margin-top:5px">14th IEEE Annual Computing and Communication Workshop and Conference (CCWC 2024)</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">2023</div>
+            <div>
+              <span class="badge badge-gold">&#127942; Best paper</span>
+              <div class="tl-sub" style="margin-top:5px">10th IEEE International Conference on Electrical Engineering, Computer Science and Informatics (EECSI 2023)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Reviewer</div>
+        <div class="tl">
+          <div class="tl-item" style="grid-template-columns:1fr">
+            <div class="tl-sub">Computer Communications Journal, Elsevier</div>
+          </div>
+          <div class="tl-item" style="grid-template-columns:1fr">
+            <div class="tl-sub">Scientific Reports Journal, Springer Nature</div>
+          </div>
+          <div class="tl-item" style="grid-template-columns:1fr">
+            <div class="tl-sub">Concurrency and Computation: Practice and Experience (CCPE), Wiley</div>
+          </div>
+          <div class="tl-item" style="grid-template-columns:1fr">
+            <div class="tl-sub">Trustworthy AI in Cancer Imaging Research, Springer Nature</div>
+          </div>
+          <div class="tl-item" style="grid-template-columns:1fr;border-bottom:none;padding-bottom:0">
+            <div class="tl-sub">International Conference on Cloud Computing and Services Science (CLOSER), INSTICC</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─── -->
+  <section id="skills" class="section">
+    <div class="section-header reveal">
+      <span class="section-num">07</span>
+      <h2 class="section-title">Skills &amp; interests</h2>
+    </div>
+    <div class="skills-grid stagger">
+      <div class="skill-card">
+        <div class="skill-label">Machine learning</div>
+        <div class="skill-tags">
+          <span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-label">Programming</div>
+        <div class="skill-tags">
+          <span class="tag">Python</span><span class="tag">Java</span><span class="tag">Java for Android</span><span class="tag">C</span><span class="tag">R</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-label">Web &amp; APIs</div>
+        <div class="skill-tags">
+          <span class="tag">Flask</span><span class="tag">FastAPI</span><span class="tag">Streamlit</span><span class="tag">Spring</span><span class="tag">RESTful APIs</span><span class="tag">JWT</span><span class="tag">Postman</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-label">Big data</div>
+        <div class="skill-tags">
+          <span class="tag">Hadoop</span><span class="tag">Spark</span><span class="tag">Kafka</span><span class="tag">Flink</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-label">Cloud &amp; DevOps</div>
+        <div class="skill-tags">
+          <span class="tag">Docker</span><span class="tag">Docker Compose</span><span class="tag">Prometheus</span><span class="tag">Grafana</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-label">Databases</div>
+        <div class="skill-tags">
+          <span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">MariaDB</span><span class="tag">MS SQL Server</span><span class="tag">MinIO</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-label">Version control &amp; IDEs</div>
+        <div class="skill-tags">
+          <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">GitLab</span><span class="tag">PyCharm</span><span class="tag">VS Code</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-label">Languages</div>
+        <div class="skill-tags">
+          <span class="tag">Greek (native)</span><span class="tag">English (fluent)</span><span class="tag">German (basic)</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-label">Interests</div>
+        <div class="skill-tags">
+          <span class="tag">Travelling</span><span class="tag">Music</span><span class="tag">Mountain biking</span><span class="tag">Trail running</span><span class="tag">CrossFit</span><span class="tag">Movies</span><span class="tag">Gaming</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>&copy; 2026 Chrysostomos Symvoulidis &middot; All rights reserved</span>
+    <span>simvoul@unipi.gr</span>
+  </footer>
+
+</main>
+
+<script>
+  /* ── Scroll-spy: highlight active nav link ── */
+  const sections = document.querySelectorAll('section[id], footer');
+  const navLinks = document.querySelectorAll('.sidenav-links a');
+
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(a => {
+          a.classList.toggle('active', a.dataset.section === e.target.id);
+        });
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+
+  sections.forEach(s => spy.observe(s));
+
+  /* ── Reveal animations on scroll ── */
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObs.unobserve(e.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -60px 0px', threshold: 0.08 });
+
+  document.querySelectorAll('.reveal, .reveal-left, .stagger').forEach(el => {
+    revealObs.observe(el);
+  });
+
+  /* ── Theme toggle ── */
+  const html        = document.documentElement;
+  const toggleBtn   = document.getElementById('themeToggle');
+  const themeLabel  = document.getElementById('themeLabel');
+
+  function applyTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    themeLabel.textContent = theme === 'light' ? 'Dark mode' : 'Light mode';
+    localStorage.setItem('theme', theme);
+  }
+
+  // On load: prefer saved choice, then OS preference, then default dark
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    applyTheme(saved);
+  } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+    applyTheme('light');
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    applyTheme(html.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
+  });
+
+  // Also listen for OS preference changes
+  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
+    if (!localStorage.getItem('theme')) applyTheme(e.matches ? 'light' : 'dark');
+  });
+
+  /* ── Publications filter ── */
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const pubItems   = document.querySelectorAll('.pub-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      pubItems.forEach(item => {
+        item.classList.toggle('hidden', f !== 'all' && item.dataset.type !== f);
+      });
+    });
+  });
+</script>
+<script>
+  (function() {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = function() {
+      const size = 64;
+      const canvas = document.createElement('canvas');
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext('2d');
+      ctx.beginPath();
+      ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+      ctx.closePath();
+      ctx.clip();
+      ctx.drawImage(img, 0, 0, size, size);
+      const favicon = document.getElementById('favicon');
+      favicon.href = canvas.toDataURL('image/png');
+    };
+    img.src = 'https://csymvoul.github.io/images/csymvoul.jpg';
+  })();
+</script>
+</body>
 </html>
