@@ -427,8 +427,29 @@
     }
     .tl-item:last-child { border-bottom: none; padding-bottom: 0; }
     .tl-date { font-size: 11px; color: var(--text-3); padding-top: 3px; }
-    .tl-title { font-size: 13.5px; font-weight: 500; margin-bottom: 2px; }
+    .tl-title { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
     .tl-sub { font-size: 12.5px; color: var(--text-2); line-height: 1.5; }
+
+    /* Accented timeline variant (degrees card) */
+    .tl-accented .tl-item > div:last-child {
+      position: relative;
+      border-left: 2px solid var(--border-md);
+      padding-left: 14px;
+    }
+    .tl-accented .tl-item > div:last-child::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 2px solid var(--text-3);
+    }
+    .tl-accented .tl-item:first-child > div:last-child::before { border-color: var(--gold); }
+    .tl-accented .tl-item:nth-child(2) > div:last-child::before { border-color: var(--accent); }
+    .tl-degree-badge { margin-bottom: 6px; }
 
     /* ═══════════════════════════════════════
        WORK EXPERIENCE
@@ -436,16 +457,57 @@
     .work-list { display: flex; flex-direction: column; }
     .work-item {
       display: grid;
-      grid-template-columns: 180px 1fr;
+      grid-template-columns: 150px 1fr;
       gap: 2rem;
       padding: 1.5rem 0;
       border-bottom: 0.5px solid var(--border);
       align-items: start;
     }
     .work-item:last-child { border-bottom: none; }
-    .work-date { font-size: 12px; color: var(--text-3); padding-top: 3px; }
-    .work-title { font-size: 15px; font-weight: 500; margin-bottom: 3px; }
-    .work-org { font-size: 13px; color: var(--accent); margin-bottom: 0; }
+    .work-date { font-size: 11px; color: var(--text-3); padding-top: 6px; line-height: 1.5; }
+    .work-title { font-size: 15px; font-weight: 600; margin-bottom: 3px; }
+    .work-org { font-size: 13px; color: var(--accent); margin-bottom: 8px; }
+
+    /* Work timeline accent */
+    .work-tl .work-item > div:last-child {
+      position: relative;
+      border-left: 2px solid var(--border-md);
+      padding-left: 14px;
+    }
+    .work-tl .work-item > div:last-child::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 7px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 2px solid var(--text-3);
+    }
+    .work-tl .work-item:nth-child(1) > div:last-child::before,
+    .work-tl .work-item:nth-child(2) > div:last-child::before { border-color: var(--accent); }
+    .work-tl .work-item:nth-child(3) > div:last-child::before { border-color: var(--green); }
+    .work-bullets {
+      list-style: none;
+      margin: 0; padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .work-bullets li {
+      font-size: 12.5px;
+      color: var(--text-2);
+      line-height: 1.6;
+      padding-left: 14px;
+      position: relative;
+    }
+    .work-bullets li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--text-3);
+    }
 
     /* ═══════════════════════════════════════
        PROJECTS
@@ -677,7 +739,7 @@
 <nav class="mobile-nav" aria-label="Page sections">
   <a href="#hero">Home</a>
   <a href="#education">Education</a>
-  <a href="#work">Work</a>
+  <a href="#work">Work Experience</a>
   <a href="#projects">Projects</a>
   <a href="#publications">Publications</a>
   <a href="#teaching">Teaching</a>
@@ -691,7 +753,7 @@
   <nav class="sidenav-links" aria-label="Page sections">
     <a href="#hero"         data-section="hero">Home</a>
     <a href="#education"    data-section="education">Education</a>
-    <a href="#work"         data-section="work">Work</a>
+    <a href="#work"         data-section="work">Work Experience</a>
     <a href="#projects"     data-section="projects">Projects</a>
     <a href="#publications" data-section="publications">Publications</a>
     <a href="#teaching"     data-section="teaching">Teaching</a>
@@ -754,7 +816,7 @@
           <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
         </a>
-        <a class="btn" href="mailto:simvoul@unipi.gr">
+        <a class="btn" href="mailto:chrisimvou@gmail.com">
           <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Contact
         </a>
@@ -794,25 +856,28 @@
     <div class="two-col stagger">
       <div class="card">
         <div class="card-title">Degrees</div>
-        <div class="tl">
+        <div class="tl tl-accented">
           <div class="tl-item">
             <div class="tl-date">2024</div>
             <div>
-              <div class="tl-title">PhD in Artificial Intelligence</div>
+              <div class="tl-degree-badge"><span class="badge badge-gold">PhD</span></div>
+              <div class="tl-title">Artificial Intelligence</div>
               <div class="tl-sub">Dept. of Digital Systems, University of Piraeus<br>Advisor: Prof. Dimosthenis Kyriazis</div>
             </div>
           </div>
           <div class="tl-item">
             <div class="tl-date">2018</div>
             <div>
-              <div class="tl-title">MSc in Big Data and Analytics</div>
+              <div class="tl-degree-badge"><span class="badge badge-blue">MSc</span></div>
+              <div class="tl-title">Big Data and Analytics</div>
               <div class="tl-sub">Dept. of Digital Systems, University of Piraeus</div>
             </div>
           </div>
           <div class="tl-item">
             <div class="tl-date">2016</div>
             <div>
-              <div class="tl-title">BSc in Computer Science</div>
+              <div class="tl-degree-badge"><span class="badge badge-gray">BSc</span></div>
+              <div class="tl-title">Computer Science</div>
               <div class="tl-sub">Dept. of Digital Systems, University of Piraeus</div>
             </div>
           </div>
@@ -849,12 +914,17 @@
       <span class="section-num">02</span>
       <h2 class="section-title">Work experience</h2>
     </div>
-    <div class="work-list stagger">
+    <div class="work-list work-tl stagger">
       <div class="work-item">
         <div class="work-date">2024.10 &ndash; today</div>
         <div>
           <div class="work-title">Researcher | Technical Manager</div>
           <div class="work-org">Gruppo Maggioli SpA &middot; Athens, Greece</div>
+          <ul class="work-bullets">
+            <li>Technical lead of the SEARCH federated storage and learning platform.</li>
+            <li>Coordinate development activities, technical roadmaps, and documentation.</li>
+            <li>Contribute to technical deliverables and project coordination.</li>
+          </ul>
         </div>
       </div>
       <div class="work-item">
@@ -862,6 +932,12 @@
         <div>
           <div class="work-title">Researcher | Technical Manager</div>
           <div class="work-org">Telesto Technologies Ltd. &middot; Athens, Greece</div>
+          <ul class="work-bullets">
+            <li>Lead the architecture and product management of smart city and healthcare platforms.</li>
+            <li>Design and develop AI-driven services, including LLM applications, chatbots, and fleet profiling solutions.</li>
+            <li>Manage feature prioritization, technical documentation, and development activities.</li>
+            <li>Contribute to European and national R&amp;D proposals and technical deliverables.</li>
+          </ul>
         </div>
       </div>
       <div class="work-item">
@@ -869,6 +945,11 @@
         <div>
           <div class="work-title">Researcher | Technical Coordinator</div>
           <div class="work-org">Thridium Ltd. &middot; London, UK</div>
+          <ul class="work-bullets">
+            <li>Coordinated scientific and technical activities across project work packages.</li>
+            <li>Monitored project progress and ensured alignment with timelines and objectives.</li>
+            <li>Facilitated collaboration among partners and ensured deliverable quality.</li>
+          </ul>
         </div>
       </div>
       <div class="work-item">
@@ -876,6 +957,12 @@
         <div>
           <div class="work-title">Research Associate</div>
           <div class="work-org">University of Piraeus &middot; Piraeus, Greece</div>
+          <ul class="work-bullets">
+            <li>Developed orchestration and Complex Event Processing components in the MATILDA project.</li>
+            <li>Designed 5G application modelling and service recommendation frameworks.</li>
+            <li>Contributed to technical deliverables and research activities.</li>
+            <li>Teaching / Lab Assistant: C Programming and Information Systems.</li>
+          </ul>
         </div>
       </div>
       <div class="work-item">
@@ -883,6 +970,12 @@
         <div>
           <div class="work-title">Research Associate</div>
           <div class="work-org">BYTE Computer S.A. &middot; Athens, Greece</div>
+          <ul class="work-bullets">
+            <li>Coordinated integration activities within the InteropEHRate project.</li>
+            <li>Managed BYTE&rsquo;s technical team and contributed to technical planning.</li>
+            <li>Designed and implemented the Health Storage Cloud and data prefetching mechanisms.</li>
+            <li>Contributed to technical deliverables and project reporting.</li>
+          </ul>
         </div>
       </div>
       <div class="work-item">
@@ -890,6 +983,10 @@
         <div>
           <div class="work-title">Research Associate</div>
           <div class="work-org">SingularLogic S.A. &middot; Athens, Greece</div>
+          <ul class="work-bullets">
+            <li>Supported project management activities for the BigDataStack project.</li>
+            <li>Contributed to technical deliverables and coordination activities.</li>
+          </ul>
         </div>
       </div>
     </div><!-- end .work-list -->
@@ -1370,7 +1467,7 @@
 
   <footer>
     <span>&copy; 2026 Chrysostomos Symvoulidis &middot; All rights reserved</span>
-    <span>simvoul@unipi.gr</span>
+    <span>chrisimvou@gmail.com</span>
   </footer>
 
 </main>
